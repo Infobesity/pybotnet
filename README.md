@@ -20,3 +20,5 @@ http://charlesleifer.com/blog/simple-botnet-written-python/
 https://github.com/coleifer/irc/tree/master/botnet
 
 https://www.cybrary.it/0p3n/python-programming-hackers-part-6-creating-ssh-botnet/
+
+https://pythonprogramming.net/reading-csv-files-python-3/
