@@ -1,7 +1,7 @@
 //basic botNet
 
 import pxssh
-
+import csv
 
 class Client:
 
@@ -36,9 +36,12 @@ def botnetCommand(command):
 def addClient(host, user, password):
     client = Client(host, user, password)
     botNet.append(client)
-
+    
+with open('iplogin.csv') as csvfile:
+    readCSV = csv.reader(csvfile, delimiter=',')
+    for row in readCSV:
+        addClient(row[0], row[1], row[2])
+        
 botNet = []
-addClient('127.0.0.1', 'ubuntu', 'ubuntu')
-
 botnetCommand('uname -v')
 botnetCommand('ls -la')
