@@ -37,11 +37,12 @@ def addClient(host, user, password):
     client = Client(host, user, password)
     botNet.append(client)
     
+botNet = []
+
 with open('iplogin.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     for row in readCSV:
         addClient(row[0], row[1], row[2])
         
-botNet = []
 botnetCommand('uname -v')
 botnetCommand('ls -la')
