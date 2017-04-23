@@ -4,8 +4,8 @@
 #It proceeds to store potentially exploitable targets in individual target files.
 
 FOLDER=/tmp/.attack-files
-SERVER=192.168.56.100
-ADAPTER=192.168.56.1
+SERVER=192.168.50.254
+ADAPTER=192.168.50.1
 LOCAL=`hostname -I`
 TARGNUM=0
 COUNT=0
