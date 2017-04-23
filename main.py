@@ -1,4 +1,4 @@
-//basic botNet
+#basic botNet
 
 import pxssh
 import csv
