@@ -41,7 +41,5 @@ else
 fi
 
 
-
-
 #Runs SSH Tunneling/Botnet
 python2.7 main.py
