@@ -17,17 +17,25 @@ if [ ! -d $FOLDER ]; then
 fi
 
 if [ ! -s $FOLDER/target_hunter.sh ]; then
-	if [ $QUIET -eq 0 ]; then
-		echo Please place target_hunter.sh in $FOLDER
+	if [ -s ~/target_hunter.sh ]; then
+		mv ~/target_hunter.sh $FOLDER
+	else
+		if [ $QUIET -eq 0 ]; then
+			echo Please place target_hunter.sh in $FOLDER/
+		fi
+		exit -1
 	fi
-	exit -1
 fi
 
 if [ ! -s $FOLDER/target_ballista.sh ]; then
-	if [ $QUIET -eq 0 ]; then
-		echo Please place target_ballista.sh in $FOLDER
+	if [ -s ~/target_ballista.sh ]; then
+		mv ~/target_ballista.sh $FOLDER
+	else
+		if [ $QUIET -eq 0 ]; then
+			echo Please place target_ballista.sh in $FOLDER/
+		fi
+		exit -1
 	fi
-	exit -1
 fi
 
 chmod 700 $FOLDER/*.sh
